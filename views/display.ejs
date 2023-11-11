@@ -1,0 +1,30 @@
+<% if(db_rows_array.length>0) { %>
+    <table class="table" border="1">
+        <tr>
+            <th>ProductID</th>
+            <th>ProductName</th>
+            <th>ProductCategory</th>
+            <th>ProductBrand</th>
+            <th>Price</th>
+            <th>Discount</th>
+            <th>InventoryID</th>
+            <th>ReviewID</th>
+        </tr>
+<% for(var i=0; i<db_rows_array.length; i++) { %>
+    <tr>
+        <td><%= db_rows_array[i].productID %></td>
+        <td><%= db_rows_array[i].product_name %></td>
+        <td><%= db_rows_array[i].product_category %></td>
+        <td><%= db_rows_array[i].product_brand %></td>
+        <td><%= db_rows_array[i].price %></td>
+        <td><%= db_rows_array[i].discount %></td>
+        <td><%= db_rows_array[i].inventoryID %></td>
+        <td><%= db_rows_array[i].reviewID %></td>
+        <td>
+            <a href='/views/edit/=<%= db_rows_array[i].productID %>">'>Edit</a>
+            <a href='/views/delete/<%= db_rows_array[i].productID %>'>Delete</a>
+        </td>
+
+    </tr>
+<% } %>
+</table>
