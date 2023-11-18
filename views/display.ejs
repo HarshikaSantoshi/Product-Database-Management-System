@@ -20,11 +20,13 @@
         <td><%= db_rows_array[i].discount %></td>
         <td><%= db_rows_array[i].inventoryID %></td>
         <td><%= db_rows_array[i].reviewID %></td>
-        <td>
-            <a href='/views/edit/=<%= db_rows_array[i].productID %>">'>Edit</a>
-            <a href='/views/delete/<%= db_rows_array[i].productID %>'>Delete</a>
-        </td>
+       
 
     </tr>
 <% } %>
 </table>
+<% } else { %>
+No record Found
+<% } %>
+
+   

@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+
+
+<body class="cbp-spmenu-push">
+	<div class="main-content">
+	<div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+		
+		<div id="page-wrapper">
+			<div class="main-page">
+				<div class="forms">
+					<div class="form-grids row widget-shadow" data-example-id="basic-forms"> 
+						<div class="form-title">
+							<h4>Product Add Form:</h4>
+							<% if (typeof success !== "undefined") { %>
+								<div class="alert alert-success">
+									<%= success %>
+								</div> 
+								<% } %>
+						</div>
+						<div class="form-body">
+							<form method="post"> 
+								<table>
+									<div class="form-group">
+                                        <label for="exampleInputName1">ProductID </label>
+                                        <input type="text" name="productID" value="" class="form-control" id="exampleInputName1"></input> 
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputName1">ProductName</label>
+                                        <input type="text" name="product_name" value="" class="form-control" id="exampleInputName1"></input>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputName1">ProductCategory</label>
+                                        <input type="text" name="product_category" value="" class="form-control" id="exampleInputName1"></input> 
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputName1">ProductBrand</label>
+                                        <input type="text" name="product_brand" value="" class="form-control" id="exampleInputName1"></input> 
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputName1">Price</label>
+                                        <input type="text" name="price" value="" class="form-control" id="exampleInputName1"></input> 
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputName1">Discount</label>
+                                        <input type="text" name="discount" value="" class="form-control" id="exampleInputName1"></input> 
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputName1">InventoryID</label>
+                                        <input type="text" name="inventoryID" value="" class="form-control" id="exampleInputName1"></input> 
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputName1">ReviewID</label>
+                                        <input type="text" name="reviewID" value="" class="form-control" id="exampleInputName1"></input> 
+                                    </div>
+									<div class="form-group">									
+									</div> 
+										<input type="submit">
+										<input type="button" value="Display" onclick="window.location='display'">
+								</table>
+							</form> 
+						</div>
+					</div>			
+				</div>
+			</div>
+		</div>
+	
+			
+        
+	</div>
+	
+	<!-- side nav js -->
+	<script src='/js/SidebarNav.min.js' type='text/javascript'></script>
+	<script>
+      $('.sidebar-menu').SidebarNav()
+    </script>
+	<!-- //side nav js -->
+	
+	<!-- Classie --><!-- for toggle left push menu script -->
+		<script src="/js/classie.js"></script>
+		<script>
+			var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+				showLeftPush = document.getElementById( 'showLeftPush' ),
+				body = document.body;
+				
+			showLeftPush.onclick = function() {
+				classie.toggle( this, 'active' );
+				classie.toggle( body, 'cbp-spmenu-push-toright' );
+				classie.toggle( menuLeft, 'cbp-spmenu-open' );
+				disableOther( 'showLeftPush' );
+			};
+			
+			function disableOther( button ) {
+				if( button !== 'showLeftPush' ) {
+					classie.toggle( showLeftPush, 'disabled' );
+				}
+			}
+		</script>
+	<!-- //Classie --><!-- //for toggle left push menu script -->
+	
+	<!--scrolling js-->
+	<script src="/js/jquery.nicescroll.js"></script>
+	<script src="/js/scripts.js"></script>
+	<!--//scrolling js-->
+	
+	<!-- Bootstrap Core JavaScript -->
+   <script src="/js/bootstrap.js"> </script>
+   
+</body>
+</html>
